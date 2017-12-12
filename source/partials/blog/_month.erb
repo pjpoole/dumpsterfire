@@ -1,0 +1,37 @@
+<div class='calendar-wrapper'>
+  <div class='calendar-head'>
+     <%= link_to format_date(date, "%B %Y"),blog_month_path(date.year, date.month), class: 'calendar__link' %>
+  </div>
+  <div class='calendar'>
+    <% month      = date.month %>
+    <% next_month = date.next_month.month %>
+    <% date       = previous_sunday(date) %>
+    <div class='calendar__header'>
+      <div class='calendar__week calendar__week--header'>
+        <% %w(S M T W T F S).each do |day_letter| %>
+          <span class='calendar__day calendar__day--header'>
+            <%= day_letter %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+    <div class='calendar__body'>
+      <% while date.month != next_month %>
+        <div class='calendar__week'>
+          <% date.upto(date.next_day(6)) do |day| %>
+            <span class='calendar__day'>
+              <% if day.month == month %>
+                <% if posts.any? { |a| a.date.day == day.day } %>
+                  <%= link_to day.mday, blog_day_path(day.year, day.month, day.day), class: 'calendar__link' %>
+                <% else %>
+                  <%= day.mday %>
+                <% end %>
+              <% end %>
+            </span>
+          <% end %>
+          <% date = date.next_day(7) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.dropshadow {
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.dropshadow--hover {
+  transition-property: box-shadow;
+  transition-duration: 300ms;
+
+  &:hover {
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4), 0 0 3px 4px rgba(0, 0, 0, 0.12);
+  }
+}

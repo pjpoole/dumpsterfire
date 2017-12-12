@@ -1,0 +1,13 @@
+.bundle
+.cache
+.DS_Store
+.sass-cache
+build/
+source/blog/entries/
+source/blog/drafts/
+data/education/
+data/jobs/
+data/living
+data/contact.yml
+notes.md
+

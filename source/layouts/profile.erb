@@ -1,0 +1,18 @@
+<% wrap_layout :layout do %>
+  <article class="post">
+
+    <div class='profile-photo'>
+      <div class='profile-photo__container'>
+        <%= image_tag 'low-angle-small.jpg', class: 'profile-photo__image' %>
+      </div>
+
+      <div class='profile-photo__caption'>
+        <h1>I am Peter.</h1>
+      </div>
+    </div>
+
+    <div class="post__content">
+      <%= yield %>
+    </div>
+  </article>
+<% end %>

@@ -1,0 +1,70 @@
+---
+layout: none
+---
+<html>
+  <head>
+    <title>CSSris</title>
+
+    <%= stylesheet_link_tag "cssris" %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <%= javascript_include_tag 'piece' %>
+    <%= javascript_include_tag 'board' %>
+    <%= javascript_include_tag 'view' %>
+    <%= javascript_include_tag 'cssris' %>
+  </head>
+  <body>
+    <header>
+      <h1>CSSris</h1>
+    </header>
+
+    <section class="sidebar sidebar-left">
+      <div class="info next-piece">
+        <figure>
+          <div id="next-piece"></div>
+          <figcaption>Next Piece</figcaption>
+        </figure>
+      </div>
+
+      <div class="info score">
+        <figure>
+          <div id="lines" class="score-info"></div>
+          <figcaption>Lines</figcaption>
+        </figure>
+        <figure>
+          <div id="level" class="score-info"></div>
+          <figcaption>Level</figcaption>
+        </figure>
+        <figure>
+          <div id="score" class="score-info"></div>
+          <figcaption>Score</figcaption>
+        </figure>
+        <figure>
+          <div id="high-score" class="score-info"></div>
+          <figcaption>High Score</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="sidebar sidebar-right">
+      <div class="info instructions">
+        <figure>
+          <h2 class="larger">Instructions</h2>
+          <ul class="list">
+            <li>ESC pauses game</li>
+            <li>&#8592; &#8594; to move pieces</li>
+            <li>&#8595; to drop piece</li>
+            <li>&#8593; to rotate &#8631;</li>
+            <li>'a' to rotate &#8630;</li>
+            <li>'s' to rotate &#8631;</li>
+          </ul>
+        </figure>
+      </div>
+    </section>
+
+    <section class="center">
+      <div id="gameboard"></div>
+    </section>
+
+  </body>
+</html>

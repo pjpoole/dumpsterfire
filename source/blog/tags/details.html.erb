@@ -1,0 +1,71 @@
+---
+layout: layout
+---
+<div class='home'>
+  <h2>Tag definitions</h2>
+  <p>Note: this is a bit of a dumpsterfire, and primarily for self-reference</p>
+  <%
+    keys = blog.tags.keys
+    seen = []
+
+    data.tags.each do |parent_tag|
+      subtotal = 0
+      parent_tag.categories.each do |tag|
+        post_count = blog.tags[tag.name].count
+        tag.post_count = post_count
+        subtotal      += post_count
+        seen << tag.name.downcase
+      end
+      parent_tag.post_count = subtotal
+    end
+
+    data.tags.each do |parent_tag|
+      parent_tag.categories.sort_by! { |tag| tag.post_count }.reverse!
+    end
+
+    uncategorized = keys - seen
+  %>
+  <div>
+    <ul>
+      <% data.tags.each do |parent_tag| %>
+        <li>
+          <div>
+            <span><%= parent_tag.name.capitalize %>: (<%= parent_tag.post_count %> tags)</span>
+            <% if parent_tag.description %>
+              <span><%= parent_tag.description %></span>
+            <% end %>
+          </div>
+          <ul>
+            <% parent_tag.categories.each do |tag| %>
+              <li>
+                <span>
+                  <%= link_to tag.name.capitalize, tag_path(tag.name) %>: (<%= tag.post_count %> posts)
+                </span>
+                <% if tag.description %>
+                  <span><%= tag.description %></span>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+
+        </li>
+      <% end %>
+      <% if uncategorized.any? %>
+        <li>
+          <div>
+            <span>Uncategorized</span>
+          </div>
+          <ul>
+            <% uncategorized.each do |tag| %>
+              <li>
+                <span>
+                  <%= link_to tag.capitalize, tag_path(tag) %>: (<%= blog.tags[tag].count %> posts)
+                </span>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

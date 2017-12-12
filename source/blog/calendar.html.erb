@@ -1,0 +1,8 @@
+---
+layout: blog
+pageable: true
+---
+<div class="home">
+  <%= partial 'partials/blog/archive_header' %>
+  <%= partial 'partials/posts/post_list', locals: { posts: page_articles } %>
+</div>

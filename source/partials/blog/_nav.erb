@@ -1,0 +1,33 @@
+<div class='post-nav'>
+  <% if prev_page %>
+    <% link_to prev_page.url do %>
+      <span class='post-nav__left'>
+        &lt; prev
+      </span>
+    <% end %>
+  <% else %>
+    <span class='post-nav--disabled'>
+      <span class='post-nav__left'>
+        &lt; prev
+      </span>
+    </span>
+  <% end %>
+
+  <span class='post-nav__page-info'>
+    <%= format_date(page_articles.first.date, "%-d %b %Y") %> to <%= format_date(page_articles.last.date, "%-d %b %Y") %>
+  </span>
+
+  <% if next_page %>
+    <% link_to next_page.url do %>
+      <span class='post-nav__right'>
+        next &gt;
+      </span>
+    <% end %>
+  <% else %>
+    <span class='post-nav--disabled'>
+      <span class='post-nav__right'>
+        next &gt;
+      </span>
+    </span>
+  <% end %>
+</div>

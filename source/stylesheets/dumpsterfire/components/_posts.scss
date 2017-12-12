@@ -1,0 +1,155 @@
+/**
+ * Posts
+ */
+.post, .post-list__item {
+  padding: $l-spacing-unit;
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit;
+  max-width: 95vw;
+  box-sizing: border-box;
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.post-list__item {
+  p {
+    margin-bottom: $s-spacing-unit;
+  }
+}
+
+.post-list__header {
+  margin-bottom: $s-spacing-unit;
+}
+
+.post-list__title {
+  font-size: $xl-font-size;
+  font-weight: $med-font-weight;
+}
+
+.post__meta, .post-list__meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+
+  a:hover & {
+    color: $brand-color;
+  }
+}
+
+.post-list__meta {
+  @extend %clearfix;
+}
+
+.post-list__info {
+  float: left;
+}
+
+.post-list__tags {
+  float: right;
+}
+
+.post__tags {
+  margin-top: $s-spacing-unit;
+}
+
+.post__tag-list {
+  @extend %clearfix;
+  margin: 0px;
+}
+
+.post__tag {
+  list-style: none;
+  float: left;
+  padding-right: 4px;
+}
+
+.post__header {
+  margin-bottom: $spacing-unit;
+}
+
+.post__title {
+  font-size: $h1-font-size;
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    font-size: $h1-mob-font-size;
+  }
+}
+
+.post__body, .post-list__body {
+  margin-bottom: $spacing-unit;
+  text-align: justify;
+
+  > ul {
+    list-style-type: disc;
+  }
+
+  h2 {
+    font-size: $h2-font-size;
+
+    @include media-query($on-laptop) {
+      font-size: $h2-mob-font-size;
+    }
+  }
+
+  h3 {
+    font-size: $h3-font-size;
+
+    @include media-query($on-laptop) {
+      font-size: $h3-mob-font-size;
+    }
+  }
+
+  h4 {
+    font-size: $h4-font-size;
+
+    @include media-query($on-laptop) {
+      font-size: $h4-mob-font-size;
+    }
+  }
+}
+
+.post-nav {
+  @extend %clearfix;
+  text-align: center;
+}
+
+.post-nav--disabled {
+  color: $grey-color;
+}
+
+.post-nav__page-info {
+  margin: auto;
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.post-nav__left {
+  float: left;
+}
+
+.post-nav__right {
+  float: right;
+}
+
+.footnotes {
+  font-size: $small-font-size;
+}
+
+
+@include media-query($on-palm) {
+  .post-list__item {
+    max-width: calc(90vw + #{$spacing-unit * 2});
+    margin-left: -$spacing-unit;
+    margin-right: -$spacing-unit;
+  }
+
+  .post {
+    max-width: calc(95vw + #{$l-spacing-unit * 2});
+    margin-left: -$l-spacing-unit;
+    margin-right: -$l-spacing-unit;
+  }
+}

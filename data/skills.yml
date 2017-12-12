@@ -1,0 +1,63 @@
+languages:
+  - name: Ruby
+    tagname: ruby
+  - name: JavaScript
+    tagname: javascript
+  - name: SQL
+    tagname: sql
+  - name: HTML
+    tagname: html
+  - name: CSS
+    tagname: css
+libraries:
+  - name: jQuery
+    tagname: jquery
+  - name: SASS
+    tagname: sass
+  - name: webpack
+    tagname: webpack
+  - name: babel
+    tagname: babel
+  - name: bootstrap
+    tagname: bootstrap
+frameworks:
+  - name: Ruby on Rails
+    tagname: rails
+  - name: React.js
+    tagname: react
+  - name: Redux.js
+    tagname: redux
+  - name: Backbone.js
+    tagname: backbone
+  - name: Marionette.js
+    tagname: marionette
+technologies:
+  - name: MySQL
+    tagname: mysql
+  - name: PostgreSQL
+    tagname: postgres
+  - name: Cassandra
+    tagname: cassandra
+  - name: Redis
+    tagname: redis
+  - name: ActiveMQ
+    tagname: activemq
+  - name: AWS
+    tagname: aws # (S3, EC2, Route53, CloudFormation, IAM, RDS, ...)
+tools:
+  - name: linux
+    tagname: linux
+  - name: bash
+    tagname: bash
+  - name: git
+    tagname: git
+design:
+  - name: Object Oriented
+  - name: Service-oriented Architecture
+  - name: REST
+  - name: API integrations
+  - name: BEM CSS
+  - name: Security
+  - name: Compliance
+
+

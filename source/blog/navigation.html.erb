@@ -1,0 +1,60 @@
+---
+layout: layout
+title: Blog Navigation
+---
+<div>
+  <h1 id='top'>Blog Navigation</h1>
+
+  <div class='two-col'>
+    <div class='jumps'>
+      <ul class='jump-list'>
+        <li class='jump-list__item'><a href='#recents'>Browse recent</a></li>
+        <li class='jump-list__item'><a href='#calendar'>By date</a></li>
+        <li class='jump-list__item'><a href='#tags'>By tag</a></li>
+        <li class='jump-list__item'><a href='#categories'>By category</a></li>
+      </ul>
+    </div>
+    <div class='jumps'>
+      <ul class='jump-list'>
+        <li class='jump-list__item'><%= link_to 'All posts', '/blog' %></li>
+        <li class='jump-list__item'><%= link_to 'All dates', '/blog/calendars' %></li>
+        <li class='jump-list__item'><%= link_to 'All tags', '/blog/tags' %></li>
+        <li class='jump-list__item'><%= link_to 'All categories', '/blog/categories' %></li>
+        <li class='jump-list__item'><%= link_to 'Tag details', '/blog/tags/details' %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <section id='recents' class='navigation-section'>
+    <div class='navigation__header'>
+      <span class='navigation__title'>Recent posts</span>
+      <a href='#'>↑(top)</a>
+    </div>
+    <%= partial 'partials/posts/post_list', locals: { posts: blog.articles.take(5), excerpt: true } %>
+  </section>
+
+  <section id='calendar' class='navigation-section'>
+    <div class='navigation__header'>
+      <span class='navigation__title'>Recent months</span>
+      <a href='#'>↑(top)</a>
+    </div>
+    <%= partial 'partials/blog/months', locals: { posts: blog.articles.take(100) } %>
+  </section>
+
+  <section id='tags' class='navigation-section'>
+    <div class='navigation__header'>
+      <span class='navigation__title'>Popular tags</span>
+      <a href='#'>↑(top)</a>
+    </div>
+    <%= partial 'partials/blog/tags', locals: { tags: blog_by_tag_count.take(20) } %>
+  </section>
+
+  <section id='categories' class='navigation-section'>
+    <div class='navigation__header'>
+      <span class='navigation__title'>Categories</span>
+      <a href='#'>↑(top)</a>
+    </div>
+    <%= partial 'partials/blog/categories', locals: { categories: categories_by_count.take(10) } %>
+  </section>
+</div>

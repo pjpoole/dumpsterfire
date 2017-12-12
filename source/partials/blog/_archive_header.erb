@@ -1,0 +1,12 @@
+<% case page_type
+when 'day'
+  date = Date.new(year, month, day)
+  date_string = "%-d %B %Y"
+when 'month'
+  date = Date.new(year, month, 1)
+  date_string = "%B %Y"
+when 'year'
+  date = Date.new(year, 1, 1)
+  date_string = "%Y"
+end %>
+<h2>Posts from <%= format_date(date, date_string) %></h2>

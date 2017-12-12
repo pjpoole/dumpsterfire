@@ -1,0 +1,23 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <%= link_to data.site.title, '/', class: 'site-header__title' %>
+
+    <% if navigation_pages %>
+      <nav class="site-header__nav nav">
+        <input type="checkbox" id="nav-trigger" class="nav__trigger" />
+        <label for="nav-trigger">
+          <span class="nav__menu-icon">
+            <%= partial 'images/icon_hamburger.svg' %>
+          </span>
+        </label>
+
+        <div class="nav__trigger-contents">
+          <%= link_to 'About', '/about', class: 'nav__page-link' %>
+          <%= link_to 'Blog', '/blog/navigation', class: 'nav__page-link' %>
+          <%= link_to 'Work', '/professional', class: 'nav__page-link' %>
+        </div>
+      </nav>
+    <% end %>
+  </div>
+</header>

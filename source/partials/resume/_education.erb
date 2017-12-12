@@ -1,0 +1,36 @@
+<div class='contents__item'>
+  <div class='contents__header'>
+    <div class='contents__first-line'>
+      <div class='contents__place'>
+        <%= school.name %>
+      </div>
+      <div class='contents__time'>
+        <%= resume_date(school) %>
+      </div>
+    </div>
+    <div class='contents__description'>
+      <% if school.degree %>
+        <%= "#{school.degree}, #{school.program}" %>
+      <% elsif school.description %>
+        <%= school.description %>
+      <% end %>
+    </div>
+  </div>
+
+  <% if school.achievements %>
+    <div class='contents__body'>
+      <ul class='contents__bullets'>
+        <% school.achievements.each do |achievement| %>
+          <li class='contents__bullet'>
+            <span class>
+              <%= "#{achievement.achievement}, #{achievement.name}" %>
+            </span>
+            <div class='contents__time'>
+              <%= resume_date(achievement) %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,7 @@
+<ul class="post-list">
+  <% posts.each do |post| %>
+    <li class='post-list__item dropshadow dropshadow--hover'>
+      <%= partial 'partials/posts/list_post', locals: { post: post, excerpt: (excerpt ||= false)} %>
+    </li>
+  <% end %>
+</ul>

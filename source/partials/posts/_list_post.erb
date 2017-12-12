@@ -1,0 +1,38 @@
+<div class='post-list__post'>
+  <% if post.data.title %>
+    <div class='post-list__header'>
+      <% link_to post.url do %>
+        <span class="post-list__title">
+          <%= post.data.title %>
+        </span>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="post-list__body">
+    <% excerpt ||= false %>
+    <%= excerpt ? post.summary : post.body %>
+  </div>
+
+  <div class='post-list__meta'>
+    <div class='post-list__info'>
+      <% link_to post.url, relative: true, class: "post-list__link" do %>
+        <span class="post__meta">
+          <%= standard_date(post.date) %>
+        </span>
+      <% end %>
+
+      <% category = post.data[:category] %>
+      <% if category %>
+        <span class='post__category'>
+          in <%= link_to category, category_path(category) %>
+        </span>
+      <% end %>
+    </div>
+
+    <div class='post-list__tags'>
+      <%= partial 'partials/posts/tags', locals: { post: post } %>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<% if post.tags && post.tags.any? %>
+  <ul class='post__tag-list'>
+    <li class='post__tag'>Tags:</li>
+    <% post.tags.each_with_index do |tag, idx| %>
+      <li class='post__tag'>
+        <%= link_to "#{tag}", tag_path(tag) %><%= idx == post.tags.size - 1 ? '' : ',' %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

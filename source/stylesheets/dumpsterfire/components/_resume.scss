@@ -1,0 +1,159 @@
+.resume-head__contact-info,
+.resume-head__address,
+.resume__section,
+.contents__first-line,
+.contents__sub-header,
+.resume-items {
+  @extend %clearfix;
+}
+
+.resume {
+  padding: $l-spacing-unit;
+}
+
+.resume-head {
+  text-align: center;
+}
+
+.resume-head__name {
+  margin-bottom: $s-spacing-unit;
+}
+
+.resume-head__last-name {
+  color: $brand-color;
+}
+
+.resume-head__contact-info {
+  text-align: center;
+}
+
+.resume-head__address {
+  display: inline-block;
+  margin: auto;
+
+  > li {
+    list-style: none;
+    float: left;
+    padding-right: 5px;
+
+    + li {
+      border-left: 1px solid #777;
+      padding-left: 5px;
+    }
+  }
+}
+
+
+
+.resume__section {
+  border-bottom: 2px dotted $grey-color;
+  margin-bottom: $spacing-unit;
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.resume__section-title {
+  font-size: $xl-font-size;
+  font-weight: $med-font-weight;
+  color: $brand-color;
+
+  margin-bottom: $s-spacing-unit;
+}
+
+.contents__item {
+  padding-bottom: $s-spacing-unit;
+  margin-bottom: $s-spacing-unit;
+
+  border-bottom: 1px dotted $grey-color;
+
+  &:last-child {
+    padding-bottom: 0px;
+    border-bottom: 0px;
+  }
+}
+
+.contents__header {
+  margin-bottom: $s-spacing-unit;
+}
+
+.contents__first-line {}
+
+.contents__place, .contents__category {
+  font-size: $large-font-size;
+  font-weight: $med-font-weight;
+  float: left;
+}
+
+.contents__sub-header, .contents__bullet {
+  .contents__time * {
+    font-size: $code-font-size;
+  }
+}
+
+.contents__bullet {
+  list-style: disc;
+}
+
+.contents__time {
+  float: right;
+}
+
+.contents__description, .contents__duties {
+  font-size: $code-font-size;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.contents__description {
+  margin-bottom: $spacing-unit;
+  font-style: italic;
+}
+
+.contents__title {
+  float: left;
+}
+
+.contents__body-item {
+  margin-bottom: $spacing-unit;
+}
+
+.contents__sub-header {
+  margin-bottom: $s-spacing-unit;
+}
+
+.resume-items {
+  margin: 0px;
+}
+
+.resume-items__item {
+  list-style: none;
+  float: left;
+  padding-right: 3px;
+}
+
+@include media-query($on-palm) {
+  .resume {
+    margin-left: -$spacing-unit;
+    margin-right: -$spacing-unit;
+  }
+
+  .resume-head__address {
+    margin-bottom: $s-spacing-unit;
+    > li {
+      float: none;
+
+      + li {
+        border-left: none;
+      }
+    }
+  }
+
+  .contents__place, .contents__category {
+    font-size: $plus-font-size;
+  }
+}

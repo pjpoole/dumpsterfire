@@ -1,0 +1,29 @@
+<header class='resume-head'>
+
+  <h1 class='resume-head__name'>
+    <span class='resume-head__first-name'><%= data.contact.first_name %></span>
+    <span class='resume-head__last-name'><%= data.contact.last_name %></span>
+  </h1>
+
+  <div class='resume-head__contact-info'>
+    <div>
+      <ul class='resume-head__address'>
+        <li><%= data.contact.address.line_1 %></li>
+        <li><%= data.contact.address.line_2 %></li>
+        <li><%= "#{data.contact.address.city} #{data.contact.address.state} #{data.contact.address.zip_code}" %></li>
+      </ul>
+    </div>
+    <div>
+      <ul class='resume-head__address'>
+        <li><%= "#{data.contact.phone.area_code} #{data.contact.phone.number}" %></li>
+        <li><%= mail_to(data.contact.email.personal) %></li>
+        <% if data.site.github_username %>
+          <li>
+            <%= partial 'partials/icon_github', locals: { username: data.site.github_username } %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+</header>

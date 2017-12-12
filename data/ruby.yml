@@ -1,0 +1,39 @@
+- name: middleman
+  description: Static site generator
+  url: https://github.com/middleman/middleman
+- name: octopress
+  description: Static site generator for devs; more flexible than jekyll; stale
+  url: https://github.com/imathis/octopress
+- name: tilt
+  description: Interface to template engines
+  url: https://github.com/rtomayko/
+- name: monologue
+  description: Rails blogging engine; can be mounted alongside other apps
+  url: https://github.com/jipiboily/monologue
+- name: toto
+  description: Tiny blog engine (for hackers?); stale
+  url: https://github.com/cloudhead/toto
+- name: paranoia
+  description: Rails plugin that soft-deletes records cleanly
+  url: https://github.com/rubysherpas/paranoia
+- name: monban
+  description: Simple Rails auth library
+  url: https://github.com/halogenandtoast/monban
+- name: suspenders
+  description: Thoughtbot's standard rails install for projects; elaborate collection of ... stuff. Central place for looking for plugins
+  url: https://github.com/thoughtbot/suspenders
+- name: lines
+  description: Rails blog app
+  url: https://github.com/opoloo/lines-engine
+- name: tyrant
+  description: Agnostic auth
+  url: https://github.com/apotonick/tyrant
+- name: clearance
+  description: Thoughtbot's auth gem
+  url: https://github.com/thoughtbot/clearance
+- name: pundit
+  description: Minimal auth
+  url: https://github.com/elabs/pundit
+- name: rolify
+  description: Roles for rails
+  url: https://github.com/RolifyCommunity/rolify

@@ -1,0 +1,26 @@
+<article class="post dropshadow" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post__header">
+    <h1 class="post__title" itemprop="name headline"><%= post.title %></h1>
+    <div class="post__meta">
+      <time datetime="<%= post.date.xmlschema %>" itemprop="datePublished">
+        <%= standard_date(post.date) %>
+      </time>
+
+      <% category = post.data[:category] %>
+      <% if category %>
+        <span class='post__category'>
+          in <%= category %>
+        </span>
+      <% end %>
+
+      <div class='post__tags'>
+        <%= partial 'partials/posts/tags', locals: { post: post } %>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="post__body" itemprop="articleBody">
+    <%= post.body %>
+  </div>
+</article>

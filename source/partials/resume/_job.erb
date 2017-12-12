@@ -1,0 +1,50 @@
+<div class='contents__item'>
+  <div class='contents__header'>
+    <div class='contents__first-line'>
+      <div class='contents__place'>
+        <%= job.name %>
+      </div>
+      <div class='contents__time'>
+        <%= resume_date(job) %>
+      </div>
+    </div>
+    <% if job.description %>
+      <div class='contents__description'>
+        <%= job.description %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class='contents__body'>
+    <% job.positions.each do |position| %>
+      <div class='contents__body-item'>
+        <div class='contents__sub-header'>
+          <div class='contents__first-line'>
+            <div class='contents__title'>
+              <%= position.title %>
+            </div>
+            <% if position.start_date %>
+              <div class='contents__time'>
+                <%= resume_date(position) %>
+              </div>
+            <% end %>
+          </div>
+          <% if position.duties %>
+            <div class='contents__duties'>
+              Role: <span class='italic'><%= position.duties %></span>
+            </div>
+          <% end %>
+        </div>
+        <% if position.bullets %>
+          <ul class='contents__bullets'>
+            <% position.bullets.each do |bullet| %>
+              <li class='contents__bullet'>
+                <%= bullet %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+/**
+ * Site header
+ */
+.site-header {
+  background-color: $header-color;
+  color: $header-text-color;
+  min-height: $spacing-unit * 1.865;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+
+  a {
+    color: $header-text-color;
+
+    &:visited { color: $header-text-color; }
+    &:hover { text-decoration: none; }
+  }
+}
+
+.site-header__title {
+  font-size: $xl-font-size;
+  text-transform: lowercase;
+  font-weight: 400;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  margin-bottom: 0;
+  float: left;
+}
+
+.site-header__nav {
+  float: right;
+  line-height: $base-line-height * $base-font-size * 2.25;
+}
+
+.nav__trigger {
+  display: none;
+}
+
+.nav__menu-icon {
+  display: none;
+}
+
+.nav__page-link {
+  // fat targets
+  padding: 20px 0;
+  color: $header-text-color;
+  line-height: $base-line-height;
+  font-size: $code-font-size;
+  font-weight: 400;
+  text-transform: lowercase;
+
+  // Gaps between nav items, but not on the last one
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@include media-query($on-palm) {
+  // // These don't do anything?
+  // position: absolute;
+  // top: 9px;
+  // right: $spacing-unit / 2;
+  // background-color: $header-color;
+  // border: 1px solid $grey-color-light;
+  // border-radius: 5px;
+  // text-align: right;
+
+  label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 10px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .nav__menu-icon {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    margin-top:  8px;
+    text-align: center;
+
+    > svg path {
+      fill: $header-text-color;
+    }
+  }
+
+  input ~ .nav__trigger-contents {
+    clear: both;
+    display: none;
+  }
+
+  input:checked ~ .nav__trigger-contents {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .nav__page-link {
+    display: block;
+    text-align: right;
+    padding: 5px 10px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    margin-left: 20px;
+  }
+}
+

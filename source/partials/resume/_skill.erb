@@ -1,0 +1,25 @@
+<div class='contents__item'>
+
+  <div class='contents__header'>
+    <div class='contents__first-line'>
+      <span class='contents__category'>
+        <%= type.capitalize %>
+      </span>
+    </div>
+  </div>
+
+  <div class='contents__body'>
+    <ul class='resume-items'>
+      <% skills.each_with_index do |skill, idx| %>
+        <li class='resume-items__item'>
+          <% unless blog.tags[skill.tagname].nil? %>
+            <%= link_to skill.name, tag_path(skill.tagname) %><%= idx == skills.size - 1 ? '' : ',' %>
+          <% else %>
+            <%= skill.name %><%= idx == skills.size - 1 ? '' : ',' %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

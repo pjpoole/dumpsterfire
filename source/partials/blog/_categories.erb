@@ -1,0 +1,17 @@
+<ul class='category-list'>
+  <% categories.each do |category, articles| %>
+    <li class='category-list__item'>
+      <div class='category__item'>
+        <% article_count = articles.count %>
+        <div class='category'>
+          <% unless category == 'uncategorized' %>
+            <%= link_to "#{category}", category_path(category) %>
+          <% else %>
+            <span>uncategorized</span>
+          <% end %>
+          <span>(<%= articles.count %> articles)</span>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

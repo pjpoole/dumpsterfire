@@ -1,0 +1,32 @@
+---
+title: Resume
+date_format: "%b %Y"
+---
+<div class='resume resume--screen dropshadow'>
+  <%= partial 'partials/resume/head' %>
+
+  <main class='resume__main'>
+    <section class='resume__section'>
+      <div class='resume__section-title'>Experience</div>
+      <div class='resume__section-contents'>
+        <% sorted_elements(data.jobs).each do |job| %>
+          <%= partial 'partials/resume/job', locals: { job: job } if job.group == 1 %>
+        <% end %>
+      </div>
+    </section>
+
+    <section class='resume__section'>
+      <div class='resume__section-title'>Skills</div>
+      <% data.skills.each do |header, skills| %>
+        <%= partial 'partials/resume/skill', locals: { type: header, skills: skills } %>
+      <% end %>
+    </section>
+
+    <section class='resume__section'>
+      <div class='resume__section-title'>Education</div>
+      <% sorted_elements(data.education).each do |school| %>
+        <%= partial 'partials/resume/education', locals: { school: school } %>
+      <% end %>
+    </section>
+  </main>
+</div>

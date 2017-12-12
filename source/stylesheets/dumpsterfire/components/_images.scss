@@ -1,0 +1,20 @@
+.profile-photo {
+  text-align: center;
+}
+
+.profile-photo__container {
+  margin: auto;
+  margin-bottom: $s-spacing-unit;
+  display: block;
+  width: 150px;
+
+  border-radius: 75px;
+  overflow: hidden;
+
+}
+
+.profile-photo__image {}
+
+.profile-photo__caption {
+  font-size: $h2-font-size;
+}

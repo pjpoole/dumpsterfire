@@ -1,0 +1,42 @@
+/**
+ * Page content
+ */
+.page-content {
+  flex: 1;
+  display: flex;
+}
+
+.page-heading {
+  font-size: $large-font-size;
+}
+
+.home {
+  margin-top: $spacing-unit;
+}
+
+.top-bottom {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top-bottom__top {}
+
+.top-bottom__content {
+  flex: 1;
+}
+
+.top-bottom__bottom {
+  width: 100%;
+  align-self: stretch;
+}
+
+.push-in {
+  padding: $spacing-unit 0px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.navigation-section {
+  margin-bottom: $l-spacing-unit;
+}

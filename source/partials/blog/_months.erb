@@ -1,0 +1,10 @@
+<div class='tiles'>
+  <% posts.group_by { |a| a.date.year }.each do |year, y_articles| %>
+
+    <% y_articles.group_by { |a| a.date.month }.each do |month, m_articles| %>
+      <div class='calendar-sheet dropshadow dropshadow--hover'>
+        <%= partial 'partials/blog/month', locals: { date: Date.new(year, month), posts: m_articles } %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

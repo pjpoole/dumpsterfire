@@ -1,0 +1,15 @@
+<% wrap_layout :layout do %>
+  <div class='top-bottom'>
+    <div class='top-bottom__top'>
+      <%= partial 'partials/posts/nav' %>
+    </div>
+    <div class='top-bottom__content'>
+      <div>
+        <%= partial 'partials/posts/post', locals: { post: current_article } %>
+      </div>
+    </div>
+    <div class='top-bottom__bottom'>
+      <%= partial 'partials/posts/nav' %>
+    </div>
+  </div>
+<% end %>

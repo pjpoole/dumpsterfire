@@ -1,0 +1,31 @@
+- name: Print resume
+  value: Make print resume derivable from dynamic resume using print media query settings
+- name: Timeline
+  value: Life timeline, including work/school/living, to cut down questions
+- name: Category styles
+  value: Different themes for different "locations" in blog
+- name: Quotes
+- name: Reading list
+- name: Links
+- name: Goals
+- name: Archive/permalink
+- name: Title-less posts?
+- name: refactor CSS
+- name: Goal progress
+- name: Learning - link to "topic"
+- name: wishlists
+- name: non sequitur category
+- name: import old posts + categorize + tag
+- name: politics blog
+- name: reviews
+- name: highlights
+- name: short post layout, proc
+- name: vocabulary
+- name: clippings / links
+- name: recipes
+- name: more elaborate tech skills
+- name: reference files (e.g. gems)
+- name: principles
+- name: uncategorized
+- name: portfolio
+- name: readmore at end of summaries

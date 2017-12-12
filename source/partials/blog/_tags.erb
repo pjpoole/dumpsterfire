@@ -1,0 +1,14 @@
+<ul class='tag-list tiles'>
+  <% tags.each do |tag, articles| %>
+    <li class='tag-list__item'>
+      <div class='tag__item dropshadow dropshadow--hover'>
+        <% article_count = articles.count %>
+        <% f_size = tag_size(article_count) %>
+        <div class='tag tag--<%= f_size %>'>
+          <%= link_to "#{tag}", tag_path(tag) %>
+          <span>(<%= articles.count %> articles)</span>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

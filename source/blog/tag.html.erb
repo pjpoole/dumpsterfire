@@ -1,0 +1,8 @@
+---
+layout: blog
+pageable: true
+---
+<div class="home">
+  <h2><%= tagname == 'untagged' ? 'untagged posts' : "Posts tagged '#{tagname}'" %></h2>
+  <%= partial 'partials/posts/post_list', locals: { posts: page_articles } %>
+</div>

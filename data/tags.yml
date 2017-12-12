@@ -1,0 +1,114 @@
+- name: programming
+  description: Languages and technologies
+  categories:
+  - name: ruby
+    description: The Ruby programming language
+  - name: rails
+    description: Ruby on Rails
+  - name: javascript
+    description: The JavaScript programming language
+  - name: debugging
+    description: Finding and fixing bugs
+  - name: bugs
+    description: When things don't work right, whether or not I fix them
+  - name: engineering
+    description: The design of large systems
+  - name: algorithms
+    description: How to best solve something in an automated way
+  - name: design patterns
+    description: Object oriented design
+  - name: testing
+    description: Test Driven Development, &c
+  - name: pair programming
+  - name: security
+  - name: ui
+- name: technologies
+  description: Specific technologies, more specific than languages or techniques
+  categories:
+    - name: devise
+      description: Auth framework for ruby and rails
+    - name: git
+      description: The git version control system
+    - name: css
+      description: Cascading Stylesheets, the language for formatting and layout
+    - name: sass
+      description: The SASS language for producing CSS
+    - name: bootstrap
+      description: Twitter bootstrap, the framework for getting a site's design off the ground quickly
+    - name: backbone
+      description: The Backbone.js javascript framework
+    - name: marionette
+      description: Marionette.js, a framework that builds on Backbone primarily by adding logic for enriching the view model
+    - name: jquery
+      description: An all-purpose, multi-browser framework for doing common tasks
+    - name: sql
+    - name: socket.io
+    - name: node.js
+    - name: canvas
+    - name: markdown
+    - name: html
+    - name: wordpress
+- name: personal
+  description: Umbrella for personal tags
+  categories:
+  - name: self
+    description: Moments of self-reflection and self-assessment; introspection
+  - name: inventory
+    description: Enumerations of personal traits
+  - name: goals
+    description: Things I want to accomplish
+  - name: personal philosophy
+    description: Aphorisms or ideas that I try to ingrain in my daily life
+  - name: weakness
+    description: What I don't do well
+  - name: frustration
+    description: Getting stuck on something
+  - name: victory
+    description: Figuring something out
+  - name: lessons
+    description: Things I learned
+  - name: memories
+    description: Recollecting specific events
+  - name: organization
+    description: Trying to keep on top of things
+  - name: learning
+    description: Milestones in learning
+  - name: fitness
+- name: activities
+  description: Things I'm doing or have done
+  categories:
+  - name: appacademy
+    description: Things which aren't part of my main sequence in AppAcademy but that are related to it
+  - name: job search
+    description: Reflections on the process of finding a job
+  - name: final project
+    description: AppAcademy final project
+  - name: writing
+    description: Reflections on writing
+  - name: design
+    description: Good and bad design
+  - name: portfolio
+    description: Demo work or hobby projects
+  - name: website
+    description: Personal website stuff
+  - name: project euler
+- name: other
+  description: Marginal topics that don't fall under a prior umbrella. Generally self-explanatory.
+  categories:
+    - name: philosophy
+    - name: language
+    - name: psychology
+    - name: society
+    - name: business
+    - name: politics
+    - name: education
+    - name: ethics
+    - name: marketing
+- name: type
+  description: What kind of post is this? How long is it?
+  categories:
+    - name: meta
+      description: Meditations on the nature of things
+    - name: stub
+      description: Stuff that I want to jot down and return to later
+

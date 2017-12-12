@@ -1,0 +1,76 @@
+$sidebar-width: 120px;
+$trigger-width: $content-width + $sidebar-width * 2;
+
+.sidebar__trigger {
+  display: none;
+}
+
+.sidebar__menu-icon {
+  display: none;
+}
+
+.sidebar-wrapper {
+  box-sizing: border-box;
+  padding: 0px $spacing-unit;
+  max-width: calc(50% - #{$content-width} / 2 - #{$spacing-unit});
+
+  @extend %clearfix;
+
+  &.sidebar-wrapper--color {
+    background-color: $header-color;
+    color: $header-text-color;
+  }
+}
+
+.sidebar__trigger-contents {
+  min-width: $sidebar-width;
+}
+
+@include media-query($trigger-width) {
+  label[for='sidebar-trigger'] {
+    background-color: $header-color;
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .sidebar-wrapper {
+    max-width: unset;
+
+  }
+
+  .sidebar__trigger-contents {
+    width: $sidebar-width;
+    margin-top: 36px;
+    float: left;
+  }
+
+  .sidebar__menu-icon {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 20px;
+    text-align: center;
+
+    &:after {
+      content: '>';
+    }
+  }
+
+  input:checked ~ label > .sidebar__menu-icon:after {
+    content: '<';
+  }
+
+  input ~ .sidebar__trigger-contents {
+    display: none;
+  }
+
+  input:checked ~ .sidebar__trigger-contents {
+    display: block;
+    padding: 5px;
+  }
+}

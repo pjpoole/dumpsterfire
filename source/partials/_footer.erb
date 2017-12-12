@@ -1,0 +1,41 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="site-footer__heading"><%= data.site.title.downcase %></h2>
+
+    <div class="site-footer__col-wrapper">
+      <div class="site-footer__col site-footer__col-1">
+        <ul class="contact-list">
+          <li>
+            <% if data.site.author %>
+              <%= "© #{Date.today.year} #{data.site.author}" %>
+            <% else %>
+              <%= date.site.title %>
+            <% end %>
+            </li>
+            <% if data.site.email %>
+            <li><a href="mailto:<%= data.site.email %>"><%= data.site.email %></a></li>
+            <% end %>
+        </ul>
+      </div>
+
+      <div class="site-footer__col site-footer__col-2">
+      </div>
+
+      <div class="site-footer__col site-footer__col-3">
+        <div class='jumps'>
+          <ul class='jump-list'>
+            <li class='jump-list__item'><%= link_to 'All posts', '/blog' %></li>
+            <li class='jump-list__item'><%= link_to 'All dates', '/blog/calendars' %></li>
+            <li class='jump-list__item'><%= link_to 'All tags', '/blog/tags' %></li>
+            <li class='jump-list__item'><%= link_to 'All categories', '/blog/categories' %></li>
+            <li class='jump-list__item'><%= link_to 'Tag details', '/blog/tags/details' %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

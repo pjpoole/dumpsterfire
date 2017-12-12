@@ -1,0 +1,15 @@
+<nav class='post-nav'>
+  <% if current_article.article_next %>
+    <% link_to current_article.article_next.url do %>
+      <span class='post-nav__left'>&lt; newer</span>
+    <% end %>
+  <% end %>
+  <% link_to '/blog' do %>
+    <span class='post-nav__go-home'>home</span>
+  <% end %>
+  <% if current_article.article_previous %>
+    <% link_to current_article.article_previous.url do %>
+      <span class='post-nav__right'>older &gt;</span>
+    <% end %>
+  <% end %>
+</nav>
