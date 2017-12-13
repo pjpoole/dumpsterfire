@@ -19,7 +19,7 @@
         <li><%= mail_to(data.contact.email.personal) %></li>
         <% if data.site.github_username %>
           <li>
-            <%= partial 'partials/icon_github', locals: { username: data.site.github_username } %>
+            <%= partial 'partials/site/icon_github', locals: { username: data.site.github_username } %>
           </li>
         <% end %>
       </ul>
