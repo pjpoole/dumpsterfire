@@ -31,6 +31,24 @@
   line-height: $base-line-height * $base-font-size * 2.25;
 }
 
+.site-header__wrap {
+  display: block;
+  @extend %clearfix;
+}
+
+.site-header__tagline {
+  display: block;
+  font-style: italic;
+  font-size: $small-font-size;
+  padding-bottom: $s-spacing-unit;
+}
+
+@include media-query($on-palm) {
+  .site-header__tagline {
+    display: none;
+  }
+}
+
 .nav__trigger {
   display: none;
 }

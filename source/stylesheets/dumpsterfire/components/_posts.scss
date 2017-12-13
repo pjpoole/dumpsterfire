@@ -81,34 +81,35 @@
 
 .post__body, .post-list__body {
   margin-bottom: $spacing-unit;
-  text-align: justify;
 
   > ul {
     list-style-type: disc;
   }
+}
 
-  h2 {
-    font-size: $h2-font-size;
+.post__body {
+  h2 { font-size: $h2-font-size; }
+  h3 { font-size: $h3-font-size; }
+  h4 { font-size: $h4-font-size; }
+}
 
-    @include media-query($on-laptop) {
-      font-size: $h2-mob-font-size;
-    }
+.post-list__body {
+  h2 { font-size: $h3-font-size; }
+  h3 { font-size: $h4-font-size; }
+  h4 { font-size: $h5-font-size; }
+}
+
+@include media-query($on-laptop) {
+  .post__body {
+    h2 { font-size: $h2-mob-font-size; }
+    h3 { font-size: $h3-mob-font-size; }
+    h4 { font-size: $h4-mob-font-size; }
   }
 
-  h3 {
-    font-size: $h3-font-size;
-
-    @include media-query($on-laptop) {
-      font-size: $h3-mob-font-size;
-    }
-  }
-
-  h4 {
-    font-size: $h4-font-size;
-
-    @include media-query($on-laptop) {
-      font-size: $h4-mob-font-size;
-    }
+  .post-list__body {
+    h2 { font-size: $h3-mob-font-size; }
+    h3 { font-size: $h4-mob-font-size; }
+    h4 { font-size: $h5-mob-font-size; }
   }
 }
 
