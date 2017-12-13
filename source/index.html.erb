@@ -1,6 +1,9 @@
 ---
 layout: layout
 ---
+<% content_for :tagline do %>
+"Computers were a mistake"
+<% end %>
 <div class="home">
   <h2>Recent Posts</h2>
   <%= partial 'partials/posts/post_list', locals: { posts: blog.articles.take(10), excerpt: true } %>
