@@ -5,6 +5,8 @@ layout: profile
 
 I am a software developer by trade. View [my resume][resume] ([pdf][pdf]) to get the formal overview of my experience.
 
+I have also started to put stuff in my [portfolio].
+
 Back? After skimming my resume, people often ask me to explain my story. Here's the overview.
 
 ### In brief:
@@ -33,3 +35,4 @@ I have a list of skills I aspire to learn on top of these, but right now my focu
 
 [resume]: /resume
 [pdf]: /files/resume-201712.pdf
+[portfolio]: /portfolio

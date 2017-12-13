@@ -1,0 +1,26 @@
+---
+title: Portfolio
+layout: layout
+---
+<div class='home'>
+  <div class='post-list'>
+    <div class='post-list__item dropshadow'>
+      <header class='post__header'>
+        <h1><%= link_to 'CSSris', '/cssris' %></h1>
+      </header>
+      <div class='post__image'>
+        <% link_to '/cssris' do %>
+          <%= image_tag 'cssris-1024x512.png' %>
+        <% end %>
+      </div>
+      <div class='post__body'>
+        <p>Using <%= link_to 'jQuery', tag_path('jquery') %> and plain <%= link_to 'javascript', tag_path('javascript') %> to re-create Tetris, specifically Nintendo Tetris (timings, scoring, and controls).</p>
+      </div>
+    </div>
+
+    <div>
+      <header class='post__header'>
+        <h3>... More to come</h3>
+      </header>
+    </div>
+  </div>
